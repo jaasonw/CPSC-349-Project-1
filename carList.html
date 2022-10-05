@@ -1,0 +1,27 @@
+---
+layout: base
+title: Car Page
+pagination:
+    data: photos.dvgfira.media
+    size: 1
+permalink: "cars/page-{{ pagination.pageNumber | plus: 1 }}/index.html"
+---
+
+<header>
+    <a href="../../index.html">Home</a>
+
+    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
+    {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}
+
+    <a href="{{ pagination.href.first }}">First</a>
+    <a href="{{ pagination.href.last }}">Last</a>
+
+    <br>
+    <h1>{{ title }}</h1>
+</header>
+
+    
+{% for car in pagination.items -%}
+    <img src="{{ car.src.landscape }}" alt="{{ car.alt }}">
+    <a href="{{ car.photographer_url }}">Photographer: {{ car.photographer }}</a>
+{% endfor -%}
