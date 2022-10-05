@@ -1,6 +1,7 @@
----
+<!-- ---
 layout: base
 title: Home
+<<<<<<< Updated upstream
 ---
 <header>
     <h1>{{ title }} </h1>
@@ -14,3 +15,55 @@ title: Home
         </small>
     </p>
 </footer>
+=======
+--- -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <title>Cars</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    </head>
+    <nav>
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+        <ul>
+            <li>
+            <a href="/index.html">Home</a>
+            </li>
+            <li>
+                <a href="about/index.html">About the Team</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Home</h1>
+    </header>
+
+    <p>This photo collection is about cars.</p>
+
+    <!-- <img src="_data/photos.13avfhr.json.media.src.original" alt="/_data/photos.13avfhr.json.media.alt" /> -->
+
+    {% assign count = 0 %}
+    {% for photo in photos.dvgfira.media %}
+    {% assign count = count | plus: 1 %}
+    <a href="cars/page-{{ count }}/index.html">
+        <img src="{{ photo.src.medium }}" alt="{{ photo.alt }}"/>
+    </a>
+    {% endfor %}
+
+    <footer>
+        <hr>
+        <p>
+            <small>
+                <a href="https://www.pexels.com">Photos provided by Pexels</a>
+            </small>
+        </p>
+    </footer>
+</html>
+
+<!-- {% for photo in livingrooms.media %}
+<a href="/photos/{{ photo.id }}">
+    <img src="{{ photo.src.tiny }}" alt="{{ photo.alt }}" />
+</a>
+{% endfor %} -->
+>>>>>>> Stashed changes
