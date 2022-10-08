@@ -13,56 +13,34 @@ permalink: "cars/page-{{ pagination.pageNumber | plus: 1 }}/index.html"
   <img src="{{ car.src.large }}" alt="{{ car.alt }}" />
 </figure>
 
-<article style="background-color: {{ car.avg_color }};">
-  <p>
-    Image Description: 
-    <em>
-      <a href="{{ car.src.large }}">
-        {{ car.alt }}
-      </a>
-    </em>
-  </p>
-
-  <br />
-
+<article>
   <p>
     Photographer:
-    <a href="{{ car.photographer_url }}">
-      {{ car.photographer }}
-    </a>
+    <a href="{{ car.photographer_url }}"> {{ car.photographer }} </a>
   </p>
-
-  <br />
 
   <p>Move between Car Pages:</p>
 
   <ul>
-  
     <li>
-      <a href="../..{{ pagination.href.first }}index.html">
-        First
-      </a>
+      <a href="../..{{ pagination.href.first }}index.html"> First </a>
     </li>
-  
-    <li>{% if pagination.href.previous %}
-      <a href="../..{{ pagination.href.previous }}index.html">
-        Previous
-      </a>{% else %}Previous{% endif %}
-    </li>
-  
-    <li>{% if pagination.href.next %}
-      <a href="../..{{ pagination.href.next }}index.html">
-        Next
-      </a>{% else %}Next{% endif %}
-    </li>
-  
-    <li>
-      <a href="../..{{ pagination.href.last }}index.html">
-        Last
-      </a>
-    </li>
-  
-  </ul>
 
+    <li>
+      {% if pagination.href.previous %}
+      <a href="../..{{ pagination.href.previous }}index.html"> Previous </a>{%
+      else %}Previous{% endif %}
+    </li>
+
+    <li>
+      {% if pagination.href.next %}
+      <a href="../..{{ pagination.href.next }}index.html"> Next </a>{% else
+      %}Next{% endif %}
+    </li>
+
+    <li>
+      <a href="../..{{ pagination.href.last }}index.html"> Last </a>
+    </li>
+  </ul>
 </article>
 {% endfor -%}
