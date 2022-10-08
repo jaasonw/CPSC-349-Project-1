@@ -1,64 +1,20 @@
-<!-- ---
+---
 layout: base
 title: Home
 ---
-<header>
-    <h1>{{ title }} </h1>
-</header>
 
-<footer>
-    <hr>
-    <p>
-        <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small>
-    </p>
-</footer>
---- -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Cars</title>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  </head>
-  <nav>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
-    <ul>
-      <li>
-        <a href="/index.html">Home</a>
-      </li>
-      <li>
-        <a href="about/index.html">About the Team</a>
-      </li>
-    </ul>
-  </nav>
-  <header>
-    <h1>Home</h1>
-    <p>This photo collection is about cars.</p>
-  </header>
-
-  <!-- <img src="_data/photos.13avfhr.json.media.src.original" alt="/_data/photos.13avfhr.json.media.alt" /> -->
+  <p>
+    Description of chosen photos collection: This collection of photos is about cars,
+    which has made transportation both easy and fast! They are almost necessary in
+    today's age and it is important to appreciate such inventions, so we have 
+    created a site to do just that!
+  </p>
+  
+  <br>
 
   {% assign count = 0 %} {% for photo in photos.dvgfira.media %} {% assign count
-  = count | plus: 1 %}
-  <a href="cars/page-{{ count }}/index.html">
-    <img src="{{ photo.src.medium }}" alt="{{ photo.alt }}" />
-  </a>
-  {% endfor %}
-
-  <footer>
-    <hr />
-    <p>
-      <small>
-        <a href="https://www.pexels.com">Photos provided by Pexels</a>
-      </small>
-    </p>
-  </footer>
-</html>
-
-<!-- {% for photo in livingrooms.media %}
-<a href="/photos/{{ photo.id }}">
-    <img src="{{ photo.src.tiny }}" alt="{{ photo.alt }}" />
-</a>
-{% endfor %} -->
+    = count | plus: 1 %}
+    <a href="cars/page-{{ count }}/index.html">
+      <img src="{{ photo.src.tiny }}" alt="{{ photo.alt }}" />
+    </a>
+    {% endfor %}
