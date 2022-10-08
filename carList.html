@@ -13,7 +13,6 @@ permalink: "cars/page-{{ pagination.pageNumber | plus: 1 }}/index.html"
   <img src="{{ car.src.large }}" alt="{{ car.alt }}" />
 </figure>
 
-<article>
   <p>
     Photographer:
     <a href="{{ car.photographer_url }}"> {{ car.photographer }} </a>
@@ -42,5 +41,4 @@ permalink: "cars/page-{{ pagination.pageNumber | plus: 1 }}/index.html"
       <a href="../..{{ pagination.href.last }}index.html"> Last </a>
     </li>
   </ul>
-</article>
 {% endfor -%}

@@ -10,7 +10,7 @@ site: CPSC 349 - Fall 2022 - Project 1
     <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
   </head>
 
-  <body>
+  <body style="background-color: {{ car.avg_color }};">
     <header>
       <nav>
         <ul>
@@ -23,7 +23,7 @@ site: CPSC 349 - Fall 2022 - Project 1
         </ul>
       </nav>
       <h1>
-        <a href="{{ car.src.large }}" style="color: {{ car.avg_color }}">
+        <a href="{{ car.src.large }}">
           {{ car.alt }}
         </a>
       </h1>
