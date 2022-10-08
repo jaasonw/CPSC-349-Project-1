@@ -39,25 +39,25 @@ permalink: "cars/page-{{ pagination.pageNumber | plus: 1 }}/index.html"
   <ul>
   
     <li>
-      <a href="../..{{ pagination.href.first }}">
+      <a href="../..{{ pagination.href.first }}index.html">
         First
       </a>
     </li>
   
     <li>{% if pagination.href.previous %}
-      <a href="../..{{ pagination.href.previous }}">
+      <a href="../..{{ pagination.href.previous }}index.html">
         Previous
       </a>{% else %}Previous{% endif %}
     </li>
   
     <li>{% if pagination.href.next %}
-      <a href="../..{{ pagination.href.next }}">
+      <a href="../..{{ pagination.href.next }}index.html">
         Next
       </a>{% else %}Next{% endif %}
     </li>
   
     <li>
-      <a href="../..{{ pagination.href.last }}">
+      <a href="../..{{ pagination.href.last }}index.html">
         Last
       </a>
     </li>
